@@ -19,5 +19,15 @@
 <!-- must use static includes if it is got java code in it that we want to use -->
 <%@ include file="variables.jsp" %>
 <%=name %>
+<p/>
+
+<!-- must use include jsp tag if you dont know what file you want till run time -->
+<% String id = request.getParameter("id"); %>
+
+<% if(id == null) { %>
+	<jsp:include page="notFoundFile.html"></jsp:include>
+<% } else { %>
+	<jsp:include page="idFound.html"></jsp:include>
+<% } %>
 </body>
 </html>
