@@ -1,4 +1,3 @@
-<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -8,11 +7,22 @@
 <title>Insert title here</title>
 </head>
 <body>
+Hello Tags! :)
+
+<% /* directive tag */ %>
+<%@ page import="java.util.*;" %>
+
+<% /* expression tag */ %>
 <%= new Date() %>
-<%@page import="gui.*" %>
-<% text tx = new text();
-out.println(tx.getText());%>
-<p/>
-<% out.println("random number: " + tx.getRandom()); %>
+
+<% /* declaration tag */ %>
+<%! String info = "Some info here"; %>
+
+<% /* scribplet tag */ %>
+<% for(int i = 0; i < 5; i++) { %>
+Looping
+<% } %>
+
+
 </body>
 </html>
